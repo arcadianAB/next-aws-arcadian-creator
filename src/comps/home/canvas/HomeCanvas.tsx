@@ -9,7 +9,7 @@ const HomeCanvas = () => {
   return (
     <div className="relative h-screen w-full bg-gray-300 lg:row-span-3 lg:h-full">
       <CanvasHeader />
-      <Canvas>
+      <Canvas className="">
         <Experience />
       </Canvas>
     </div>

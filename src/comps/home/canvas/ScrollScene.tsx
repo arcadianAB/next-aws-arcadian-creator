@@ -1,24 +1,15 @@
-import { useScroll } from "@react-three/drei";
+import { Environment, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
+import { Dragon } from "./Dragon";
 
 const ScrollScene = () => {
-  const meshRef = useRef<THREE.Mesh>(null!);
-  const scroll = useScroll();
-
-  useFrame(() => {
-    if (!meshRef.current) return;
-    const offset = scroll.offset - 1;
-    meshRef.current.rotation.x = Math.PI * offset;
-    meshRef.current.rotation.y = Math.PI * offset;
-  });
-
   return (
     <>
-      <mesh ref={meshRef}>
-        <boxBufferGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="hotpink" />
-      </mesh>
+      <Environment preset="forest" />
+      <Suspense fallback={null}>
+        <Dragon />
+      </Suspense>
     </>
   );
 };

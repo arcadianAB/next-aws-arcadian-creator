@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <>
       <Staging />
-      <ScrollControls pages={3} damping={0.1}>
+      <ScrollControls pages={10} damping={0.1}>
         <ScrollScene />
       </ScrollControls>
     </>
