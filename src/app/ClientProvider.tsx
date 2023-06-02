@@ -22,7 +22,7 @@ const ClientProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      {/* {isLoading && isHome && <InitLoadingScreen />} */}
+      {isLoading && isHome && <InitLoadingScreen />}
       {children}
     </>
   );
