@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body style={inter.style}>
+        <body className={inter.className}>
           <ClientProvider>{children}</ClientProvider>
         </body>
       </html>

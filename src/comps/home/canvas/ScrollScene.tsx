@@ -6,7 +6,6 @@ import { Dragon } from "./Dragon";
 const ScrollScene = () => {
   return (
     <>
-      <Environment preset="forest" />
       <Suspense fallback={null}>
         <Dragon />
       </Suspense>
