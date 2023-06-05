@@ -56,16 +56,16 @@ export function Dragon(props: JSX.IntrinsicElements["group"]) {
     state.camera.position.set(
       Math.cos(offset * 10) * 2,
       Math.sin(offset * 3) * 3,
-      offset * 50
+      offset * 70
     );
     state.camera.lookAt(0, 0, 0);
   });
 
   return (
     <group
-      position-y={-1.5}
-      position-z={6.5}
-      rotation-z={0}
+      position-y={-2.5}
+      position-z={5}
+      rotation-x={0}
       ref={group}
       {...props}
       dispose={null}
