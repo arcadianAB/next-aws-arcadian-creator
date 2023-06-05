@@ -29,7 +29,7 @@ type GLTFActions = Record<ActionName, THREE.AnimationAction>;
 export function Dragon(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null);
   const { nodes, materials, animations } = useGLTF(
-    "/models/Dragon.glb"
+    "https://arcadian-creator.s3.eu-north-1.amazonaws.com/ArcadianCreator/Dragon.glb"
   ) as GLTFResult;
   const { actions } = useAnimations<GLTFActions | any>(animations, group);
 
@@ -102,4 +102,6 @@ export function Dragon(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/models/Dragon.glb");
+useGLTF.preload(
+  "https://arcadian-creator.s3.eu-north-1.amazonaws.com/ArcadianCreator/Dragon.glb"
+);

@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     id: 1,
-    title: "Project 1",
+    title: "Bon Voyage",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
     img: "https://picsum.photos/200/300",
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project 2",
+    title: "Visit Guinea",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
     img: "https://picsum.photos/200/300",
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Project 3",
+    title: "BPAB",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
     img: "https://picsum.photos/200/300",
@@ -42,7 +42,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Project 4",
+    title: "HerBodyHerChoice",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
     img: "https://picsum.photos/200/300",
@@ -50,136 +50,15 @@ const projects = [
   },
   {
     id: 5,
-    title: "Project 5",
+    title: "PinkSalt",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
     img: "https://picsum.photos/200/300",
     link: "/projects/5",
-  },
-  {
-    id: 6,
-    title: "Project 6",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/6",
-  },
-  {
-    id: 7,
-    title: "Project 7",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/7",
-  },
-  {
-    id: 8,
-    title: "Project 8",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/8",
-  },
-  {
-    id: 9,
-    title: "Project 9",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/9",
-  },
-  {
-    id: 10,
-    title: "Project 10",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/10",
-  },
-
-  //repeat
-
-  {
-    id: 1,
-    title: "Project 1",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/1",
-  },
-  {
-    id: 2,
-    title: "Project 2",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/2",
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/3",
-  },
-  {
-    id: 4,
-    title: "Project 4",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/4",
-  },
-  {
-    id: 5,
-    title: "Project 5",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/5",
-  },
-  {
-    id: 6,
-    title: "Project 6",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/6",
-  },
-  {
-    id: 7,
-    title: "Project 7",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/7",
-  },
-  {
-    id: 8,
-    title: "Project 8",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/8",
-  },
-  {
-    id: 9,
-    title: "Project 9",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/9",
-  },
-  {
-    id: 10,
-    title: "Project 10",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum, quibusdam, quia, quae voluptatem voluptas quod dolorum voluptatibus quos natus quas.",
-    img: "https://picsum.photos/200/300",
-    link: "/projects/10",
   },
 ];
+const doubleProjects = [...projects, ...projects];
+const quadProjects = [...doubleProjects, ...doubleProjects];
 
 export type IProjectItem = (typeof projects)[0];
 
@@ -271,7 +150,7 @@ const HomeProjects = () => {
         className="group relative row-span-4 overflow-auto bg-yellow-100 text-left text-dark lg:h-full"
       >
         <ul ref={container} className="flex py-[1rem] lg:flex-col">
-          {projects.map((project, i) => (
+          {quadProjects.map((project, i) => (
             <li key={project.id + project.title} className="group relative">
               <ProjectItem
                 handleClick={handleClick}

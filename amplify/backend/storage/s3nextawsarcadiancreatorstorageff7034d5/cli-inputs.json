@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3nextawsarcadiancreatorstorageff7034d5",
+  "bucketName": "next-aws-arcadian-creator-storage-ff7034d5",
+  "policyUUID": "cfac5b74",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
