@@ -1,13 +1,37 @@
-import HomeCanvas from "@/comps/home/canvas/HomeCanvas";
-import HomeProjects from "@/comps/home/projects/HomeProjects";
-import HomeAbout from "@/comps/home/about/HomeAbout";
+"use client";
+import ListSection from "@/comps/sections/list/ListSection";
+import SplashScreen, { initAtom } from "@/comps/loading/SplashScreen";
+import { useAtom } from "jotai";
+import { useRef } from "react";
+import IntroSection from "@/comps/sections/intro/IntroSection";
+import SummarySection from "@/comps/sections/summary/SummarySection";
+import { ReactLenis } from "@studio-freight/react-lenis";
+import GridSection from "@/comps/sections/grid/GridSection";
+import Background from "@/comps/background/Background";
 
 export default function Home() {
+  const [initA] = useAtom(initAtom);
+
+  const main = useRef<HTMLDivElement>(null);
+
   return (
-    <main className="grid h-full w-full bg-dark text-center text-light lg:h-screen lg:grid-cols-2 lg:grid-rows-4">
-      <HomeCanvas />
-      <HomeProjects />
-      <HomeAbout />
-    </main>
+    <>
+      <ReactLenis root>
+        <main
+          ref={main}
+          className={`relative w-full ${
+            initA.initEnter ? "h-full" : "h-screen overflow-hidden"
+          }`}
+        >
+          <Background />
+          <SplashScreen />
+
+          <IntroSection />
+          <SummarySection />
+          <ListSection />
+          <GridSection />
+        </main>
+      </ReactLenis>
+    </>
   );
 }
