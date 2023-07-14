@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import HideShowList from "./HideShowList";
 gsap.registerPlugin(ScrollTrigger);
 
 const list = [
@@ -33,9 +34,14 @@ const maskedList = [
 
 const ListSection = () => {
   const container = useRef<HTMLDivElement>(null);
+  const title = useRef<
+    HTMLHeadingElement | HTMLParagraphElement | HTMLDivElement
+  >(null);
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
+      gsap.from(container.current, {
+        scale: 0.5,
+        borderRadius: "8rem",
         scrollTrigger: {
           trigger: container.current,
           start: "top bottom",
@@ -45,9 +51,16 @@ const ListSection = () => {
         },
       });
 
-      tl.from(container.current, {
-        scale: 0.5,
-        borderRadius: "8rem",
+      gsap.from(title.current, {
+        opacity: 0,
+        xPercent: 100,
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top bottom",
+          end: "center center",
+          scrub: true,
+          markers: false,
+        },
       });
     }, container);
 
@@ -56,33 +69,12 @@ const ListSection = () => {
   return (
     <div
       ref={container}
-      className="relative flex h-[105vh] w-full items-center bg-dark"
+      className="relative flex h-[105vh] w-full flex-col items-start justify-center bg-dark"
     >
-      <ul className="flex w-full flex-col p-[1rem]">
-        {list.map((item, i) => (
-          <li
-            className="group relative flex w-full justify-between bg-dark text-[5vw] text-light "
-            key={`${item.title}-${i}`}
-          >
-            <div
-              className="absolute bottom-0 
-            flex h-0 w-full 
-            origin-bottom 
-            justify-between overflow-hidden 
-          bg-light px-[1rem] 
-          text-dark shadow-light 
-            transition-all duration-500 group-hover:h-full
-            "
-            >
-              <p>{maskedList[i].title}</p>
-              <p className="self-center text-[2.5vw]">
-                {maskedList[i].description}
-              </p>
-            </div>
-            <p className="px-[1rem]">{item.title}</p>
-          </li>
-        ))}
-      </ul>
+      <h2 ref={title} className="px-[2rem] text-light">
+        WHAT WE DO...
+      </h2>
+      <HideShowList list={list} maskedList={maskedList} />
     </div>
   );
 };

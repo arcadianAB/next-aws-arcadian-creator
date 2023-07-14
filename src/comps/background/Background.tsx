@@ -5,7 +5,7 @@ import BackgroundExperience from "./BackgroundExperience";
 
 const Background = () => {
   return (
-    <div className="pointer-events-none fixed inset-0 z-[-1] bg-light">
+    <div className="pointer-events-none fixed inset-0 z-[-1] bg-light blur-md">
       <Canvas>
         <BackgroundExperience />
       </Canvas>

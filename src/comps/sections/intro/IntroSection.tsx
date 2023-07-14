@@ -39,31 +39,6 @@ const IntroSection = () => {
     });
   };
 
-  const handleLongPress = (e: MouseEvent) => {
-    gsap.to(overlay.current, {
-      "--x": "50%",
-      "--y": "50%",
-      "--clipSize": "100%",
-      duration: 0.3,
-      ease: "sine.out",
-    });
-  };
-
-  const onClick = (e: MouseEvent) => {
-    gsap.to(overlay.current, {
-      "--clipSize": "50%",
-      duration: 0.3,
-      ease: "sine.out",
-    });
-  };
-
-  const defaultOptions = {
-    shouldPreventDefault: true,
-    delay: 500,
-  };
-
-  const longPressEvent = useLongPress(handleLongPress, onClick, defaultOptions);
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(foreground.current, {
@@ -81,7 +56,6 @@ const IntroSection = () => {
   }, []);
   return (
     <div
-      {...longPressEvent}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       ref={container}
